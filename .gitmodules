@@ -1,0 +1,3 @@
+[submodule "thingymcconfig-buildroot"]
+	path = thingymcconfig-buildroot
+	url = https://github.com/thingyjp/thingymcconfig-buildroot
