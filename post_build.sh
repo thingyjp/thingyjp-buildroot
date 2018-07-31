@@ -22,6 +22,11 @@ rm -frv $TARGETDIR/usr/bin/cvtsudoers \
 	$TARGETDIR/usr/bin/sudoreplay \
 	$TARGETDIR/usr/bin/pcregrep \
 	$TARGETDIR/usr/bin/pkcs1-conv \
+	$TARGETDIR/usr/bin/lcdgps \
+	$TARGETDIR/usr/bin/gpsdecode \
+	$TARGETDIR/usr/bin/sexp-conv \
+	$TARGETDIR/usr/bin/sqlite3 \
+	$TARGETDIR/usr/bin/xmllint \
 	$TARGETDIR/usr/sbin/visudo \
 	$TARGETDIR/usr/sbin/wpa_cli \
 	$TARGETDIR/etc/services \
