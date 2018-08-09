@@ -22,6 +22,9 @@ rm -frv $TARGETDIR/usr/bin/cvtsudoers \
 	$TARGETDIR/usr/bin/sudoreplay \
 	$TARGETDIR/usr/bin/pcregrep \
 	$TARGETDIR/usr/bin/pkcs1-conv \
+	$TARGETDIR/usr/bin/sexp-conv \
+	$TARGETDIR/usr/bin/sqlite3 \
+	$TARGETDIR/usr/bin/xmllint \
 	$TARGETDIR/usr/sbin/visudo \
 	$TARGETDIR/usr/sbin/wpa_cli \
 	$TARGETDIR/etc/services \
@@ -29,5 +32,13 @@ rm -frv $TARGETDIR/usr/bin/cvtsudoers \
 	$TARGETDIR/usr/share/glib-2.0/valgrind/glib.supp \
 	$TARGETDIR/usr/libexec/installed-tests \
 	$TARGETDIR/usr/share/installed-tests
+
+#clean up GPSd
+rm -frv $TARGETDIR/usr/bin/gps2udp \
+	$TARGETDIR/usr/bin/gpsdecode \
+	$TARGETDIR/usr/bin/gpspipe \
+	$TARGETDIR/usr/bin/gpxlogger \
+	$TARGETDIR/usr/bin/gpsctl \
+	$TARGETDIR/usr/bin/lcdgps
 
 date -u +"%Y-%m-%d %H:%M:%S" > $TARGETDIR/etc/buildstamp
