@@ -1,9 +1,4 @@
-[submodule "thingymcconfig-buildroot"]
-	path = thingymcconfig-buildroot
-	url = https://github.com/thingyjp/thingymcconfig-buildroot
 [submodule "thingyjp-certs"]
 	path = thingyjp-certs
 	url = https://github.com/thingyjp/thingyjp-certs.git
-[submodule "thingyjp-ota-buildroot"]
-	path = thingyjp-ota-buildroot
-	url = https://github.com/thingyjp/thingyjp-ota-buildroot.git
+
