@@ -1,5 +1,5 @@
 config BR2_PACKAGE_LIBTEENYNET
 	bool "libteenynet"
-	select BR2_PACKAGE_GLIB
+	select BR2_PACKAGE_LIBGLIB2
 	help
 

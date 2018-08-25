@@ -1,5 +1,6 @@
 config BR2_PACKAGE_THINGYJP_OTA
 	bool "thingyjp-ota"
+	select BR2_PACKAGE_THINGYMCCONFIG
 	select BR2_PACKAGE_JSON_GLIB
 	help
 	  OTA for Linux based things
