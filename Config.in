@@ -1,4 +1,3 @@
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingymcconfig/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingymcconfig-example/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingyjp-ota/Config.in"
-
