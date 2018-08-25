@@ -6,6 +6,8 @@ config BR2_PACKAGE_THINGYMCCONFIG
 	select BR2_PACKAGE_LIBNL
 	select BR2_PACKAGE_WPA_SUPPLICANT
 	select BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT
+	select BR2_PACKAGE_LIBNLGLUE
+	select BR2_PACKAGE_LIBTEENYNET
 	help
 	  Provisioning and configuration for Linux based things
 
