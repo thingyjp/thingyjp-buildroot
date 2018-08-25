@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LIBNLGLUE
+	bool "libnlglue"
+	select BR2_PACKAGE_GLIB
+	help
+
