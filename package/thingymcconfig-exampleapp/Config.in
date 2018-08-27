@@ -1,6 +1,6 @@
 config BR2_PACKAGE_THINGYMCCONFIG_EXAMPLE
 	bool "example app"
-	depends on thingymcconfig
+	depends on BR2_PACKAGE_THINGYMCCONFIG
 	help
 	  Example application for thingymcconfig
 

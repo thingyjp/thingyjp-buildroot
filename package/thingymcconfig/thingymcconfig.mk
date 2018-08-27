@@ -9,7 +9,7 @@ THINGYMCCONFIG_SITE = https://github.com/fifteenhex/thingymcconfig.git
 THINGYMCCONFIG_SITE_METHOD = git
 THINGYMCCONFIG_LICENSE = GPL-3.0
 THINGYMCCONFIG_LICENSE_FILES = LICENSE
-THINGYMCCONFIG_DEPENDENCIES = host-pkgconf libmicrohttpd json-glib libnl
+THINGYMCCONFIG_DEPENDENCIES = host-pkgconf libmicrohttpd json-glib libnlglue libteenynet
 THINGYMCCONFIG_GIT_SUBMODULES = YES
 THINGYMCCONFIG_INSTALL_STAGING = YES
 
