@@ -19,3 +19,5 @@ config BR2_PACKAGE_THINGYJP_OTA_KEYSDIR
 config BR2_PACKAGE_THINGYJP_OTA_STAMP
 	bool "stamp image"
 	depends on BR2_PACKAGE_THINGYJP_OTA
+	help
+	  Use the stamp tool to add the uuid and version number into the image
