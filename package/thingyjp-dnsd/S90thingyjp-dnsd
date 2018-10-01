@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Starts thingyjp-ota
+#
+
+PID=/var/run/thingyjp-ota.pid
+MTDS="-m /dev/mtd4 -m /dev/mtd5"
+LOG="-l /tmp/thingyjp-ota.log"
+
+start() {
+	printf "Starting thingyjp-ota: "
+	start-stop-daemon -S -q -p $PID -b \
+		--exec /usr/sbin/ota -- $MTDS $LOG
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+stop() {
+	printf "Stopping thingyjp-ota: "
+	start-stop-daemon -K -q -p $PID
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload)
+  	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
