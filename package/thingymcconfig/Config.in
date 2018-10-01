@@ -7,6 +7,8 @@ config BR2_PACKAGE_THINGYMCCONFIG
 	select BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT
 	select BR2_PACKAGE_LIBNLGLUE
 	select BR2_PACKAGE_LIBTEENYNET
+	select BR2_PACKAGE_LIBGPIOD
+	depends on BR2_PACKAGE_IFUPDOWN_SCRIPTS=n
 	help
 	  Provisioning and configuration for Linux based things
 
