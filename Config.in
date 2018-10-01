@@ -1,3 +1,13 @@
+config THINGYJP_SPACE_PATH
+        string "space path"
+        help
+          Path of the block device
+
+config THINGYJP_SPACE_TYPE
+	string "space type"
+	help
+	  Filesystem type
+
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingymcconfig/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingymcconfig-exampleapp/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingyjp-ota/Config.in"
