@@ -41,7 +41,3 @@ rm -frv $TARGETDIR/usr/bin/gps2udp \
 	$TARGETDIR/usr/bin/gpxlogger \
 	$TARGETDIR/usr/bin/gpsctl \
 	$TARGETDIR/usr/bin/lcdgps
-
-date -u +"%Y-%m-%d %H:%M:%S" > $TARGETDIR/etc/buildstamp
-
-mkdir -p $TARGETDIR/space
