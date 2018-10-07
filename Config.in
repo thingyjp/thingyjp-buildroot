@@ -11,5 +11,6 @@ config THINGYJP_SPACE_TYPE
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingymcconfig/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingymcconfig-exampleapp/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingyjp-ota/Config.in"
+source "$BR2_EXTERNAL_THINGYJP_PATH/package/thingyjp-dnsd/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/libnlglue/Config.in"
 source "$BR2_EXTERNAL_THINGYJP_PATH/package/libteenynet/Config.in"

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_THINGYJP_DNSD
+	bool "thingyjp-dnsd"
+	select BR2_PACKAGE_GLIB
+	select BR2_PACKAGE_C_ARES
