@@ -3,6 +3,7 @@
 # Starts thingymcconfig.
 #
 
+INTERFACE=TMPL_INTERFACE
 CONFIGDIR=/space/thingymcconfig
 CONFIGFILE=$CONFIGDIR/config.json
 
@@ -10,7 +11,7 @@ start() {
 	printf "Starting thingymcconfig: "
 	mkdir -p $CONFIGDIR
 	start-stop-daemon -S -q -p /var/run/thingymcconfig.pid -b \
-		--exec /usr/sbin/thingymcconfig -- -i mlan0 -f $CONFIGFILE -w -a "ota" -a "example" -l /tmp/thingymcconfig.log
+		--exec /usr/sbin/thingymcconfig -- -i $INTERFACE -f $CONFIGFILE -w -a "ota" -a "example" -l /tmp/thingymcconfig.log
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
 stop() {

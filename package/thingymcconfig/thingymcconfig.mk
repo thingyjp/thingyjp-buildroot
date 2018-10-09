@@ -16,7 +16,9 @@ THINGYMCCONFIG_INSTALL_STAGING = YES
 THINGYMCCONFIG_CONF_OPTS += -Dwpasupplicantpath=/usr/sbin/wpa_supplicant
 
 define THINGYMCCONFIG_INSTALL_INIT_SYSV
-	$(INSTALL) -D -m 0755 $(THINGYMCCONFIG_PKGDIR)/S90thingymcconfig $(TARGET_DIR)/etc/init.d/S90thingmcconfig
+	sed s/TMPL_INTERFACE/$(BR2_PACKAGE_THINGYMCCONFIG_INTERFACE)/ $(THINGYMCCONFIG_PKGDIR)/S90thingymcconfig.template >\
+		$(TARGET_DIR)/etc/init.d/S90thingmcconfig
+	chmod 755 $(TARGET_DIR)/etc/init.d/S90thingmcconfig
 endef
 
 $(eval $(meson-package))
