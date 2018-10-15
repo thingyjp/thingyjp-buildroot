@@ -4,13 +4,15 @@
 #
 
 PID=/var/run/thingyjp-ota.pid
+OTA_HOST="-h TMPL_HOST"
+OTA_PATH="-p TMPL_PATH"
 MTDS="-m /dev/mtd4 -m /dev/mtd5"
 LOG="-l /tmp/thingyjp-ota.log"
 
 start() {
 	printf "Starting thingyjp-ota: "
 	start-stop-daemon -S -q -p $PID -b \
-		--exec /usr/sbin/ota -- $MTDS $LOG
+		--exec /usr/sbin/ota -- $OTA_HOST $OTA_PATH $MTDS $LOG
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
 stop() {

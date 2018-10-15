@@ -4,11 +4,13 @@
 #
 
 INTERFACE=TMPL_INTERFACE
+RUNDIR=/run/thingymcconfig
 CONFIGDIR=/space/thingymcconfig
 CONFIGFILE=$CONFIGDIR/config.json
 
 start() {
 	printf "Starting thingymcconfig: "
+	mkdir -p $RUNDIR
 	mkdir -p $CONFIGDIR
 	start-stop-daemon -S -q -p /var/run/thingymcconfig.pid -b \
 		--exec /usr/sbin/thingymcconfig -- -i $INTERFACE -f $CONFIGFILE -w -a "ota" -a "example" -l /tmp/thingymcconfig.log

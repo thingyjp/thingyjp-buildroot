@@ -1,20 +1,18 @@
 #!/bin/sh
 #
-# Starts thingyjp-ota
+# Starts thingyjp-dnsd
 #
 
-PID=/var/run/thingyjp-ota.pid
-MTDS="-m /dev/mtd4 -m /dev/mtd5"
-LOG="-l /tmp/thingyjp-ota.log"
+PID=/var/run/thingyjp-dnsd.pid
 
 start() {
-	printf "Starting thingyjp-ota: "
+	printf "Starting thingyjp-dnsd: "
 	start-stop-daemon -S -q -p $PID -b \
-		--exec /usr/sbin/ota -- $MTDS $LOG
+		--exec /usr/bin/dnsd
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
 stop() {
-	printf "Stopping thingyjp-ota: "
+	printf "Stopping thingyjp-dnsd: "
 	start-stop-daemon -K -q -p $PID
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }

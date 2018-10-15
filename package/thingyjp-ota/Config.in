@@ -5,6 +5,14 @@ config BR2_PACKAGE_THINGYJP_OTA
 	help
 	  OTA for Linux based things
 
+config BR_PACKAGE_THINGYJP_OTA_HOST
+	string "host"
+	depends on BR2_PACKAGE_THINGYJP_OTA
+
+config BR_PACKAGE_THINGYJP_OTA_PATH
+	string "path"
+	depends on BR2_PACKAGE_THINGYJP_OTA
+
 config BR2_PACKAGE_THINGYJP_OTA_REPODIR
 	string "repo directory"
 	depends on BR2_PACKAGE_THINGYJP_OTA
@@ -22,3 +30,4 @@ config BR2_PACKAGE_THINGYJP_OTA_STAMP
 	depends on BR2_PACKAGE_THINGYJP_OTA
 	help
 	  Use the stamp tool to add the uuid and version number into the image
+
