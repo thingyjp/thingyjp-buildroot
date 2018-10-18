@@ -41,3 +41,9 @@ rm -frv $TARGETDIR/usr/bin/gps2udp \
 	$TARGETDIR/usr/bin/gpxlogger \
 	$TARGETDIR/usr/bin/gpsctl \
 	$TARGETDIR/usr/bin/lcdgps
+
+#clean up mosquitto
+rm -frv $TARGETDIR/etc/init.d/S50mosquitto \
+	$TARGETDIR/usr/bin/mosquitto_pub \
+	$TARGETDIR/usr/bin/mosquitto_sub \
+	$TARGETDIR/usr/sbin/mosquitto
